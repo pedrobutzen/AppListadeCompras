@@ -1,0 +1,30 @@
+<ion-view title="{{ lista.nome }}" ng-controller="ItensListaCtrl" >
+	<ion-content>
+		<div class="list">
+			<div class="item">
+				<div class="row text-center">
+					<div class="col col-67">{{ lista.nome }}</div>
+					<div class="col"><h4>Estoque</h4></div>
+					<div class="col"><h4>Comprar</h4></div>
+				</div>
+			</div>
+			<a class="item" ng-repeat="item in itens | orderBy:'nome'" ng-class="{comprado: item.comprado}" ng-hide="item.estoque>item.estoqueMin" ng-click="comprarItem(item)">
+				<div class="row">
+					<div class="col col-67 bold">
+                        {{ item.nome }}
+                    </div>
+					<div class="col text-center">
+						<div class="">
+							{{ item.estoque }} {{ item.unidade }}
+						</div>
+					</div>
+					<div class="col text-center">
+						<div class="assertive">
+							{{ item.estoqueIdeal - item.estoque }} {{ item.unidade }}
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

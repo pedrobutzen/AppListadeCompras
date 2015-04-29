@@ -1,0 +1,9 @@
+{
+  "name": "ListaCompras",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-rc.4",
+    "angular-cache": "~4.1.0",
+    "lodash": "~3.7.0"
+  }
+}

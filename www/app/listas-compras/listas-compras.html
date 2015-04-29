@@ -1,0 +1,16 @@
+<ion-view view-title="Listas de Compras" ng-controller="ListasComprasCtrl">
+	<ion-nav-buttons side="right">
+      <button class="button button-clear" ng-click="addLista()">
+        <i class="icon ion-ios-plus-empty"></i>
+      </button>
+    </ion-nav-buttons>
+	<ion-content>
+		<div class="list">
+
+			<a class="item item-icon-right" ng-repeat="lista in listas | orderBy:'nome'" ng-href="#/home/itens-lista/{{lista.id}}">
+				{{ lista.nome }}
+				<i class="icon ion-clipboard icon-accessory"></i>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>
